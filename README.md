@@ -7,3 +7,11 @@
 # Mealie
 
 Follow the project [here](https://docs.mealie.io/)
+
+# Notes
+
+- Change context
+
+```sh
+kubectl config set-context --current --namespace=mealie
+```
