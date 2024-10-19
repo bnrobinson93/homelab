@@ -27,3 +27,8 @@ kubectl config set-context --current --namespace=mealie
 ```sh
 k apply -f deployment.yaml
 ```
+6. Forward the port
+```sh
+k port-forward pods/mealie-6497fc698b-ghlht 9000
+7. Navigate to [localhost:9000](http://localhost:9000)
+8. Notice that the settings indicates that the version is old. Update the deployment
