@@ -27,6 +27,12 @@ helm install homarr oben01/homarr --namespace homar --create-namespace
 
 ## Upgrade
 
+To get current values:
+
+```sh
+helm show values oben01/homarr > homarr.yaml
+```
+
 Now, specify your own values using this:
 
 ```sh

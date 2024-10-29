@@ -52,3 +52,21 @@ kubectl port-forward pods/mealie-6497fc698b-ghlht 9000
 
 7. Navigate to [localhost:9000](http://localhost:9000)
 8. With services, this can stick around
+
+# Prometheus
+
+```sh
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+# Create monitoring/prometheus-stack
+helm install prometheus-stack prometheus-community/kube-prometheus-stack --namespace=monitoring --create-namespace
+```
+
+What gets installed:
+
+- prometheus-stack-grafana - UI and metrics visualization
+- prometheus-stack-kube-prom-alertmanager - Alerts based on certain metrics (e.g. if memory of pod >800M, email)
+- prometheus-stack-kube-prom-operator - Simplifies the deployment of Prometheus & resources for K8s. Allows for monitoring by label
+- prometheus-stack-kube-prom-prometheus - Collecting and storing metrics as a time series
+- prometheus-stack-kube-state-metrics - Contains state of objects (deployments, pods, etc) and exposes to Prometheus
+- prometheus-stack-prometheus-node-exporter - Agent on each worker node to provide node-level metrics
