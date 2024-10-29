@@ -3,6 +3,9 @@
 1. Install Rancher Desktop
 2. Install kubectl (snap or brew)
 3. Install k9s (snap)
+4. Install helm (snap)
+
+- Also need to run this: `sudo ln -s /snap/k9s/current/bin/k9s /snap/bin/`
 
 # Mealie
 
