@@ -36,6 +36,6 @@ yt-dlp -o "%(title)s.%(ext)s" --restrict-filenames -f mp4 "$url"
 [ $? -ne 0 ] && echo "Failed to download video" && exit 1
 
 echo "Download is complete. Check your download folder"
-open ~/Downloads
+open .
 
 popd
